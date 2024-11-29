@@ -6,6 +6,11 @@ spring:
           uri: http://localhost:8081/
           predicates:
             - Path=/api/employees/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: myCircuitBreaker
+                fallbackUri: forward:/api/dummy-employees
 
 server:
   port: 8082
