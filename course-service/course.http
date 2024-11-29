@@ -41,3 +41,11 @@ Content-Type: application/json
   "courseId": 1
 }
 
+###
+POST http://localhost:8083/api/enrollments
+Content-Type: application/json
+
+{
+"employeeId": 1,
+"courseId": 1
+}

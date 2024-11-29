@@ -24,10 +24,10 @@ public class CoursesService {
         return courses;
     }
 
-//    public CourseDetails findById(Long id) {
-//        var course = courseClient.findCourseById(id);
-//        var employees = employeesService.listEmployees();
-//        return courseMapper.toDto(course, employees);
-//
-//    }
+    public CourseDetails findById(Long id) {
+        var course = courseClient.findCourseById(id);
+        var employees = employeesService.listEmployees();
+        return courseMapper.toDto(course, employees);
+
+    }
 }
