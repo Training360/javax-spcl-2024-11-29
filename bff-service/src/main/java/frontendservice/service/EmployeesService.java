@@ -1,6 +1,5 @@
 package frontendservice.service;
 
-import frontendservice.careergateway.CareerClient;
 import frontendservice.employeesgateway.Role;
 import frontendservice.employeesgateway.CreateEmployeeCommand;
 import frontendservice.employeesgateway.Employee;
@@ -9,10 +8,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
