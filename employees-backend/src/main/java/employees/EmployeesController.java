@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.web.header.Header;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -23,7 +24,8 @@ public class EmployeesController {
     }
 
     @GetMapping
-    public List<EmployeeResource> listEmployees() {
+    public List<EmployeeResource> listEmployees(@RequestHeader HttpHeaders headers) {
+        log.info("Headers: {}", headers);
         return employeesService.listEmployees();
     }
 
